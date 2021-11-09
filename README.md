@@ -1,6 +1,6 @@
 # loan-calculator
 
-![image](https://github.com/kamalov-eldar/Vue.js-component/tree/master/docs/img/screen.jpg)
+![image](https://github.com/kamalov-eldar/Vue.js-component/blob/master/docs/img/screen.jpg)
 
 ## VueJS + верстка (калькулятора займа)
 
