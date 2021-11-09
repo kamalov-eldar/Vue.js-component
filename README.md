@@ -2,6 +2,7 @@
 
 ![image](https://github.com/kamalov-eldar/Vue.js-component/blob/master/docs/img/screen.jpg)
 
+![image](https://github.com/kamalov-eldar/movitop/blob/master/docs/img/screen.jpg)
 ## VueJS + верстка (калькулятора займа)
 
 - Адаптивно сверстать блок калькулятора займа
