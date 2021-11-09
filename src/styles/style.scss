@@ -1,0 +1,665 @@
+html {
+  box-sizing: border-box; // чтоб паддинги не увеличивали блок
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box; // чтоб паддинги не увеличивали блок
+}
+
+img {
+  max-width: 100%; // чтоб не прывышало размеры контейнера
+  height: auto; // для пропорционального сжатия по высоте
+}
+
+//убирает подсветку во всех браузерах на input, select, button, a
+:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: 230px;
+  font-family: "Raleway", sans-serif;
+  color: #000000;
+  background: #ffffff;
+}
+
+/*
+// min-width от 1920px и больше
+@media (min-width: 1920px) {
+
+  }
+
+// max-width до 768px
+@media (max-width: 768px) {
+
+  }
+
+  // max-width до 576px
+@media (max-width: 576px) {
+
+}
+
+// max-width до 320px
+@media (max-width: 320px) {
+}
+*/
+
+.btn {
+  width: 100%;
+  height: 57px;
+  border: 1px solid #cacaca;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px 20px;
+  color: #000000;
+  cursor: pointer;
+  margin: 0;
+  //display: block;
+  text-align: center;
+  text-decoration: none;
+
+  // max-width до 768px
+  @media (max-width: 940px) {
+    //padding: 5px;
+    height: 50px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    height: 40px;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 80px;
+
+  @media (max-width: 940px) {
+    padding: 40px;
+  }
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+  @media (max-width: 425px) {
+    padding: 10px;
+  }
+}
+
+.calculator {
+  max-width: 1505px;
+  min-width: 270px;
+  margin: 0 auto;
+  padding: 80px 80px 80px 100px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+
+  // min-width от 1360px и больше
+  @media (min-width: 1360px) {
+    width: 100%;
+  }
+  // max-width до 940px и больше
+  @media (max-width: 940px) {
+    padding: 40px;
+  }
+
+  // max-width до 768px и больше
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+
+  @media (max-width: 425px) {
+    padding: 10px;
+  }
+
+  &__title {
+    width: 100%;
+    font-family: "Raleway", sans-serif;
+    font-size: 47px;
+    margin: 6px 0 60px;
+    white-space: nowrap;
+
+    // max-width до 768px
+    @media (max-width: 940px) {
+      font-size: 35px;
+    }
+
+    // max-width до 768px
+    @media (max-width: 768px) {
+      font-size: 30px;
+      margin-bottom: 50px;
+      white-space: normal;
+    }
+
+    // max-width до 768px
+    @media (max-width: 425px) {
+      // min-width: 295px;
+      font-size: 27px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    // max-width до 1360px и больше
+    @media (max-width: 1360px) {
+      display: block;
+    }
+  }
+
+  &-payment {
+    margin-right: 80px;
+    display: block;
+    width: 100%;
+    max-width: 805px;
+    // max-width до 768px
+
+    @media (max-width: 1360px) {
+      margin-bottom: 80px;
+      max-width: none;
+    }
+  }
+
+  &-payment__text {
+    color: #9fa1a3;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 40px 0 20px;
+    display: block;
+    // max-width до 768px
+
+    @media (max-width: 768px) {
+      font-size: 10px;
+    }
+  }
+
+  &-sum {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 20px 0 10px;
+  }
+  &-sum__title {
+    margin-right: auto;
+    margin-left: 25px;
+    //margin-top: 10px;
+    font-size: 27px;
+    font-weight: 500;
+    white-space: nowrap;
+    // max-width до 768px
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+  &-sum__img {
+    display: inline-block;
+    width: 20px;
+    margin-right: 15px;
+  }
+
+  &-sum__input {
+    width: 125px;
+    border: none;
+    margin-right: 27px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #000;
+    text-align: right;
+
+    // max-width до 768px
+    @media (max-width: 768px) {
+      font-size: 20px;
+      width: 85px;
+      margin-right: 15px;
+    }
+
+    &::placeholder {
+      font-weight: 500;
+      font-size: 28px;
+      color: #000;
+      text-align: right;
+
+      // max-width до 768px
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &-sum__label {
+    font-family: "Open Sans", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    margin-right: 27px;
+
+    // max-width до 768px
+    @media (max-width: 768px) {
+      font-size: 20px;
+      margin-right: 15px;
+    }
+  }
+  /**/
+  &-period {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 40px 0 10px;
+
+    // max-width до 768px
+    @media (max-width: 768px) {
+      margin-top: 20px;
+    }
+  }
+
+  &-period__title {
+    margin-right: auto;
+    margin-left: 25px;
+    font-size: 27px;
+    font-weight: 500;
+    white-space: nowrap;
+
+    // max-width до 768px
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+  &-period__input {
+    width: 36px;
+    border: none;
+    margin-right: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    text-align: right;
+
+    // max-width до 768px
+    @media (max-width: 768px) {
+      font-size: 20px;
+      width: 26px;
+    }
+
+    &::placeholder {
+      font-weight: 500;
+      font-size: 28px;
+      color: #000;
+      text-align: right;
+
+      // max-width до 768px
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &-period__months {
+    font-family: "Open Sans", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    margin-right: 27px;
+
+    // max-width до 768px
+    @media (max-width: 768px) {
+      font-size: 20px;
+      margin-right: 15px;
+    }
+  }
+
+  &-result {
+    @media (min-width: 1360px) {
+      min-width: 227px;
+    }
+
+    // min-width до 1360px
+    @media (min-width: 1360px) {
+      width: 100%;
+      max-width: 395px;
+    }
+  }
+
+  &-result__container {
+    // max-width до 1360px
+    @media (max-width: 1360px) {
+      display: flex;
+      justify-content: space-around;
+    }
+    @media (max-width: 425px) {
+      justify-content: space-between;
+    }
+  }
+}
+
+.payment-type {
+  display: flex;
+  margin-bottom: 70px;
+  align-items: center;
+
+  // max-width до 768px
+  @media (max-width: 768px) {
+    margin-bottom: 35px;
+  }
+  @media (max-width: 660px) {
+    display: block;
+    margin-bottom: 70px;
+  }
+
+  &__title {
+    margin-right: 180px;
+    font-size: 27px;
+    font-weight: 500;
+    white-space: nowrap;
+
+    // max-width до 768px
+    @media (max-width: 1360px) {
+      margin-right: 40px;
+    }
+
+    // max-width до 768px
+    @media (max-width: 768px) {
+      font-size: 20px;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    // max-width до 768px
+    @media (max-width: 768px) {
+      margin-top: 10px;
+    }
+    @media (max-width: 425px) {
+      display: block;
+      margin: 10px 0;
+    }
+  }
+
+  &__annuity {
+    border-radius: 0 5px 5px 0;
+    margin-left: -1px;
+    &:hover, //измен цвета при наведении
+    &:focus {
+      border: 2px solid #67ac5c;
+    }
+    // min-width от 1360px и больше
+    @media (min-width: 1360px) {
+      max-width: 180px;
+    }
+    // max-width до 940px
+    @media (max-width: 940px) {
+      width: 160px;
+    }
+
+    // max-width до 660px
+    @media (max-width: 660px) {
+      width: 100%;
+    }
+    @media (max-width: 425px) {
+      border-radius: 5px;
+    }
+  }
+
+  &__differentiated {
+    border-radius: 5px 0 0 5px;
+    &:hover, //измен цвета при наведении
+    &:focus {
+      border: 2px solid #67ac5c;
+    }
+
+    // min-width от 1360px и больше
+    @media (min-width: 1360px) {
+      max-width: 280px;
+    }
+
+    @media (max-width: 940px) {
+      width: 240px;
+    }
+
+    // max-width до 768px
+    @media (max-width: 660px) {
+      width: 100%;
+    }
+
+    @media (max-width: 425px) {
+      border-radius: 5px;
+    }
+  }
+}
+
+/* --------slider range------------ */
+.slider {
+  &-sum {
+    width: 100%;
+    padding: 3px 5px;
+    @media (max-width: 1360px) {
+      padding: 0;
+    }
+  }
+
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+  }
+
+  &__text {
+    color: #9fa1a3;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+
+    // max-width до 768px
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+
+  &-sum__input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    background: -webkit-linear-gradient(left, #67ac5c 0%, #67ac5c 0%, #cacaca 0%, #cacaca 0%);
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+  }
+
+  /*ползунок*/
+  &-sum__input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    background-color: #67ac5c;
+    position: relative;
+  }
+
+  &-sum__input::-webkit-slider-thumb:active {
+    border-color: #67ac5c;
+  }
+}
+
+.slider-period {
+  width: 100%;
+  padding: 3px 5px;
+
+  // max-width до 1360px
+  @media (max-width: 1360px) {
+    padding: 0;
+  }
+
+  &__input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    background: -webkit-linear-gradient(left, #67ac5c 0%, #67ac5c 0%, #cacaca 0%, #cacaca 0%);
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+  }
+
+  /*ползунок*/
+  &__input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    background-color: #67ac5c;
+    position: relative;
+  }
+
+  &__input::-webkit-slider-thumb:active {
+    border-color: #67ac5c;
+  }
+}
+
+/* --------end slider range------------ */
+
+.calculator-rate {
+  &__title {
+    color: #9fa1a3;
+    font-weight: 500;
+    margin-top: 3px;
+    display: block;
+    white-space: nowrap;
+
+    @media (max-width: 1360px) {
+      margin: 0;
+    }
+  }
+
+  &__percent {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-size: 63px;
+    font-weight: 600;
+    margin: 20px 0 30px;
+    // max-width до 768px
+    @media (max-width: 768px) {
+      font-size: 43px;
+    }
+  }
+}
+
+.calculator-paying {
+  &__title {
+    color: #9fa1a3;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  &__amount {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-size: 70px;
+    font-weight: 600;
+    margin: 20px 0 33px;
+    white-space: nowrap;
+
+    // max-width до 1360px
+    @media (max-width: 1360px) {
+      font-size: 63px;
+      font-weight: 600;
+      margin: 20px 0 30px;
+    }
+    // max-width до 768px
+    @media (max-width: 768px) {
+      font-size: 43px;
+    }
+  }
+
+  &__label {
+    font-size: 70px;
+    font-weight: 600;
+    margin: 0 0 20px 20px;
+
+    // max-width до 1360px
+    @media (max-width: 1360px) {
+      font-size: 60px;
+      font-weight: 600;
+    }
+    // max-width до 768px
+    @media (max-width: 768px) {
+      font-size: 40px;
+      margin: 0 0 12px 20px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    // max-width до 768px
+    @media (max-width: 425px) {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.calculator-result {
+  &__btn {
+    width: 100%;
+
+    height: 65px;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #67ac5c;
+    font-size: 23px;
+    font-weight: 500;
+    padding: 5px 20px;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 0;
+    display: block;
+
+    // min-width от 1360px и больше
+    @media (min-width: 1360px) {
+      max-width: 395px;
+    }
+
+    // max-width до 768px
+    @media (max-width: 768px) {
+      font-size: 18px;
+      height: 45px;
+    }
+  }
+
+  &__text {
+    color: #9fa1a3;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 44px 0 30px;
+    display: block;
+    white-space: nowrap;
+
+    // max-width до 768px
+    @media (max-width: 768px) {
+      font-size: 10px;
+      margin: 22px 0 20px;
+    }
+  }
+}
